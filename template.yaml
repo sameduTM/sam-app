@@ -37,6 +37,11 @@ Resources:
       CodeUri: users/
       Handler: app.get_users
       Runtime: python3.14
+      AutoPublishAlias: live
+      DeploymentPreference:
+        Type: Canary10Percent5Minutes
+      Architectures:
+        - x86_64
       Events:
         GetUsersApi:
           Type: Api
@@ -50,6 +55,11 @@ Resources:
       CodeUri: users/
       Handler: app.create_user
       Runtime: python3.14
+      AutoPublishAlias: live
+      DeploymentPreference:
+        Type: Canary10Percent5Minutes
+      Architectures:
+        - x86_64
       Events:
         CreateUserApi:
           Type: Api
