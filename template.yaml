@@ -58,7 +58,7 @@ Resources:
           TABLE_NAME: !Ref UsersTable
       Policies:
         - DynamoDBCrudPolicy:
-            TableName: !Ref TableName
+            TableName: !Ref UsersTable
 
   # Add a Dynamodb Table
   UsersTable:
